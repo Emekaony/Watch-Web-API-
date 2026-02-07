@@ -1,0 +1,56 @@
+# Build output
+bin/
+obj/
+out/
+
+# User-specific files
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Visual Studio settings
+.vscode/
+.vs/
+
+# Mac OS
+.DS_Store
+
+# Windows
+Thumbs.db
+
+# Rider IDE
+.idea/
+
+# ASP.NET secrets
+**/secrets.json
+
+# Logs
+*.log
+
+# NuGet
+*.nupkg
+.nuget/
+packages/
+project.lock.json
+
+# Dotnet tools
+*.generated.cs
+*.dbmdl
+
+# JetBrains Rider
+.idea/
+*.sln.iml
+
+# Resharper
+_ReSharper*/
+*.[Rr]e[Ss]harper
+
+# Coverage & test results
+TestResults/
+coverage/
+
+# Others
+*.pidb
+*.pdb
+*.mdb
