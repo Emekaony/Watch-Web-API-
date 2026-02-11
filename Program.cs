@@ -4,7 +4,11 @@ var builder = WebApplication.CreateBuilder(args);
 // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
 builder.Services.AddOpenApi();
 
+builder.Services.AddControllers();
+
 var app = builder.Build();
+
+app.MapControllers();
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment()) {
@@ -30,6 +34,15 @@ app.MapGet("/weatherforecast", () => {
     return forecast;
 })
 .WithName("GetWeatherForecast");
+
+app.MapGet("/", () => {
+    Dictionary<string, string> result = new() {
+        { "greeting", "Hello, World!" },
+        { "status", "active" },
+        { "role", "developer" }
+    };
+    return result;
+}).WithName("GetHome");
 
 app.Run();
 
